@@ -1,2 +1,2 @@
-# wp-interior-lounge-
+# wp-interior-lounge
 website for wordpress
