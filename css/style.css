@@ -7,6 +7,7 @@ body {
     font-weight: 400;
     font-style: normal;
     color: #000000;
+    margin: 0;
 }
 
 .wrapper {
@@ -15,9 +16,166 @@ body {
     /* padding: 0 20px; */
 }
 
+/* header */
+
+.page-header {
+background-color: #ffffff;
+border-bottom: 1px solid #F5D581;
+}
+
+.page-header__wrapper {
+    padding: 10px 0 18px 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+/* for logo header */
+
+.page-header__logo-wrapper {
+    margin-right: auto;
+}
+
+.page-header__logo-wrapper a {
+    text-decoration: none;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    column-gap: 18px;
+    align-items: end;
+}
+
+.page-header__logo-wrapper img {
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+
+.page-header__logo-wrapper .page-header__logo-name {
+    font-family: "Montserrat", sans-serif;
+    color: #9F7303;
+    font-size: 18px;
+    line-height: 27px;
+    font-weight: 400;
+    margin: 0;
+}
+
+.page-header__logo-wrapper .page-header__logo-description {
+    font-family: "Montserrat", sans-serif;
+    color: #000000;
+    font-size: 9px;
+    line-height: 14px;
+    font-weight: 300;
+    margin: 0;
+}
+
+/* for menu header */
+
+.menu-primary-container .menu {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+.menu-primary-container a {
+    text-decoration: none;
+    color: #000000;
+    font-size: 18px;
+    line-height: 27px;
+    font-weight: 400;
+    padding: 6px 0;
+    /* padding: 10px 25px; */
+    margin-right: 40px;
+}
+
+.menu-primary-container .menu-item-has-children {
+    position: relative;
+    background-image: url("../img/icon-sub-menu.svg");
+    background-position: 78% center;
+    background-size: 13px 9px;
+    background-repeat: no-repeat;
+}
+
+.menu-primary-container .menu-item-has-children:hover .sub-menu {
+    display: block;
+}
+
+.menu-primary-container .menu-item-has-children a {
+    padding-right: 18px;
+}
+
+.menu-primary-container .menu-item-has-children .sub-menu {
+    display: none;
+    position: absolute;
+    min-width: 200px;
+    top: 27px;
+    left: 0;
+    /* top: 30px;
+    left: 20px; */
+
+    background-color: #ffffff;
+    box-shadow: 0px 4px 8px 0px #6161612E;
+    box-shadow: 0px 2px 4px 0px #6161612E;
+    z-index: 2;
+    padding: 16px;
+    box-sizing: border-box;
+}
+
+.menu-primary-container .sub-menu .menu-item {
+    margin-bottom: 23px;
+    list-style: none;
+}
+
+.menu-primary-container .current-menu-item a {
+    color: #9F7303;
+}
+
+.menu-primary-container .sub-menu a {
+    color: #000000;
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+}
+
+.menu-primary-container a:hover {
+    color: #9F7303;
+}
+
+/* for button header */
+
+.page-header__button-wrapper a {
+    text-decoration: none;
+    color: #000000;
+    background-color: transparent;
+    font-size: 18px;
+    line-height: 27px;
+    font-weight: 400;
+    padding: 6px 23px;
+    border: 1px solid #9F7303;
+    border-radius: 8px;
+}
+
+.page-header__button-wrapper a:hover {
+    background-color: #FFFDF8;
+}
+
+.page-header__button-wrapper a:active {
+    background-color: #FFF7E3;
+}
+
+/* main content */
+
 .page-main {
     background-color: #fffdf8;
-    padding-top: 70px;
+    padding-top: 50px;
 }
 
 /* styles for wysiwyg */
@@ -141,6 +299,11 @@ body {
     font-weight: 400;
 }
 
+.reviews-form__item--text .wpcf7-form-control:focus,
+.reviews-form__item--text .wpcf7-form-control:focus-visible {
+    border-color: #9F7303;
+}
+
 .reviews-form__item--text .wpcf7-form-control::placeholder {
     color: #000000;
     opacity: 0.3;
@@ -184,6 +347,14 @@ body {
     font-weight: 400;
 }
 
+.reviews-form__item--button .wpcf7-submit:hover {
+    background-color: #856103;
+}
+
+.reviews-form__item--button .wpcf7-submit:active {
+    background-color: #684C05;
+}
+
 .reviews-form__button-container .reviews-form__warning {
     font-family: "Montserrat", sans-serif;
     font-size: 12px;
@@ -201,7 +372,6 @@ body {
     column-gap: 24px;
     row-gap: 8px;
     margin-bottom: 32px;
-    
 }
 
 .reviews__image-wrapper {
@@ -235,6 +405,3 @@ body {
     font-weight: 400;
     margin: 0;
 }
-
-
-
